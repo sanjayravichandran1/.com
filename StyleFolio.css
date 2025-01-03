@@ -1,0 +1,323 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  text-decoration: none;
+
+}
+
+
+/* Container for Flexbox Alignment */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  /* Space between image and text */
+  flex-wrap: wrap;
+  /* Allows wrapping for smaller screens */
+  padding-bottom: 0px;
+}
+
+/* Profile Image Section */
+.profile {
+  display: inline-block;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  box-shadow: 0 1px 20px rgb(138, 1, 146);
+  overflow: hidden;
+
+
+}
+
+/* Profile Image Style */
+.proimg1 {
+  padding-top: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  /* Circular image */
+  /* Slight scaling effect */
+
+}
+
+/* Personal Data Section */
+.prnl-data {
+  text-align: left;
+  /* Align text to the left */
+  max-width: 500px;
+  /* Restrict the width of text container */
+}
+
+/* Responsive Design for Medium Screens (Tablets) */
+@media (max-width: 968px) {
+  .profile {
+    height: 300px;
+    width: 300px;
+    /* Smaller profile image */
+  }
+
+  .proimg1 {
+    height: 100%;
+    width: 100%;
+  }
+
+  .prnl-data {
+    text-align: center;
+    /* Center text for smaller screens */
+    max-width: 100%;
+    /* Use full width for text container */
+  }
+}
+
+/* Responsive Design for Small Screens (Mobile Phones) */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    /* Stack items vertically */
+    gap: 20px;
+    /* Reduce spacing */
+  }
+
+  .profile {
+    height: 200px;
+    width: 200px;
+    /* Smaller profile image */
+    display: block;
+    /* Ensure visibility */
+  }
+
+  .prnl-data {
+    text-align: center;
+    /* Center align text */
+  }
+}
+
+.hire-me {
+  background-color: #9f0688;
+  /* Professional green color */
+  font-family: sans-serif;
+  color: white;
+  /* Text color */
+  border: none;
+  /* Removes default border */
+  padding: 12px 24px;
+  /* Adds padding for a larger, clickable button */
+  font-size: 18px;
+  /* Larger font size for visibility */
+  font-weight: bold;
+  /* Bold text */
+  border-radius: 8px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  transition: all 0.3s ease;
+  /* Smooth hover transition */
+}
+
+.hire-me:hover {
+  cursor: pointer;
+  background-color: #a0098a9f;
+}
+
+
+
+.hire-me:active {
+  background-color: #1e7e34;
+  /* Even darker green when clicked */
+  box-shadow: 0 5px #666;
+  /* Adds a shadow effect */
+  transform: translateY(2px);
+  /* Button depress effect */
+}
+
+.hire-me:focus {
+  outline: none;
+  /* Removes focus outline for cleaner look */
+}
+
+
+
+
+.bg {
+  background-color: rgb(209, 209, 230);
+
+}
+
+.cont1 {
+  box-shadow: 0 1px 15px rgba(164, 54, 54, 0.3);
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.922);
+  text-align: center;
+  padding: 40px;
+  font-display: initial;
+  font-size: x-large;
+  margin-left: 250px;
+  margin-right: 250px;
+  font-family: 'Times New Roman';
+  color: wheat;
+
+}
+
+@media screen and (max-width:800px) {
+  .wrapper-main {
+    margin-top: 150px;
+
+  }
+}
+
+@media screen and (max-width:600px) {
+  .wrapper-main {
+    margin-top: 210px;
+  }
+
+}
+
+@media screen and (max-width:800px) {
+  .cont1 {
+    margin: 5px;
+
+  }
+
+}
+
+
+.cont2 {
+  margin-top: 50px;
+
+}
+
+.contbg {
+  color: rgba(0, 22, 66, 0.922);
+}
+
+/* Container Styling */
+.cont3 {
+  background-color: rgb(31, 48, 130);
+  margin-top: 80px;
+  width: 100%;
+  padding: 60px;
+  text-align: center;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 1;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+
+}
+
+#home {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+/* Image Wrapper */
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  width: 500px;
+  /* Set width for the image container */
+  height: 600px;
+  /* Set height for the image container */
+  overflow: hidden;
+  /* Ensures overlay doesn't go outside bounds */
+  /* Optional: Rounded corners */
+}
+
+/* Image Styling */
+.proimg {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* Ensures image fills the container without distortion */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  /* Smooth hover transition */
+  /* Matches the container's rounded corners */
+}
+
+/* Hover Effect for Images */
+.proimg:hover {
+  transform: scale(1.05);
+  /* Slight zoom effect on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  /* Shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Overlay Styling */
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  /* Positioned at the bottom */
+  left: 0;
+  width: 100%;
+  /* Full width of the image */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  /* Black fade effect */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  opacity: 0;
+  /* Initially hidden */
+  transition: opacity 0.3s ease;
+  /* Smooth fade-in effect */
+}
+
+/* Show Overlay on Hover */
+.img-wrapper:hover .text-overlay {
+  opacity: 1;
+  /* Overlay becomes visible */
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .img-wrapper {
+    width: 250px;
+    height: 350px;
+
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .img-wrapper {
+    width: 190px;
+    height: 300px;
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .proimg {
+    border-radius: 10px;
+
+  }
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-link {
+  color: #333;
+  font-size: 24px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #0077b5;
+  /* Change to respective platform color */
+}

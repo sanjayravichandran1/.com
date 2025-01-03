@@ -1,0 +1,119 @@
+<title>
+	Employee Tax Calculation
+</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script>
+	function calcu() {
+		var sal = parseInt(emsal.value);
+		var salAT = 0;
+		var tax = 0;
+		if (sal <= 250000) {
+			tax = 0 * 0;
+			salAT = sal;
+		}
+		else if (sal > 250000 && sal <= 500000) {
+			tax = sal * 0.1;
+			salAT = sal - (sal * 0.1);
+		}
+		else if (sal > 500000 && sal < 1000000) {
+			tax = sal * 0.2;
+			salAT = sal - (sal * 0.2);
+		}
+		else if (sal >= 1000000) {
+			tax = sal * 0.3;
+			salAT = sal - (sal * 0.3);
+		}
+		var Ftax = parseInt(tax);
+		Ttax.value = Ftax;
+		tbxresult.value = salAT;
+
+	}
+</script>
+<style>
+	* {
+		padding: 0%;
+		margin: 0%;
+	}
+
+	@media screen and (max-width:425px) {
+		.container {
+
+			width: 100%;
+			padding: 0%;
+			margin: 0%;
+			height: 100%;
+
+		}
+
+	}
+</style>
+
+<html>
+
+<body style="margin: 0px; background-color: rgba(154, 44, 191, 0.737); ">
+	<center>
+		<div class="container-fluid" style="padding-top: 3%;margin: 0px; height: 100%;">
+
+			<h1 style="padding: 5px; font-weight: bolder;">Employee TAX Calculator</h1> <br><br>
+			<table style="font-size: x-large; font-family: Arial, sans-serif;">
+				<tr>
+					<td>EmpId</td>
+					<td><input style="margin: 10px;border-radius: 10px" type="number" placeholder="00" /></td>
+				</tr>
+				<tr>
+					<td>EmpName</td>
+					<td><input style="margin: 10px; border-radius: 10px ;" type="text" placeholder="Your name" /></td>
+				</tr>
+				<tr>
+					<td>Salary</td>
+					<td><input style="margin: 10px;border-radius: 10px" type="number" placeholder="0.0" id="emsal" />
+					</td>
+				</tr>
+				<tr>
+					<td>Total Taxs</td>
+					<td><input style="margin: 10px;border-radius: 10px" type="Text" placeholder="Tax"
+							readonly="readonly" id="Ttax" /></td>
+				</tr>
+				<tr>
+					<td>Salary After Tax</td>
+					<td><input style="margin: 10px; border-radius: 10px" type="Text" placeholder="Net Salary"
+							readonly="readonly" id="tbxresult" /></td>
+				</tr>
+				<tr>
+					<td><br></td>
+				</tr>
+				<tr>
+					<td>
+						<input class="btn btn-danger" style="margin: 10px;" type="button" value="Cancel"
+							onclick="location.href='EmpTaxcal.html';" />
+
+					</td>
+					<td><input class="btn btn-success" style="margin: 10px;" type="button" value="Calculate"
+							onclick="calcu()" />
+						<button type="button" class="btn btn-primary "
+							style="margin-right: 30px; padding-left: 20px; padding-right:20px ;"
+							onclick="location.href='index.html#projects';">Back</button>
+					</td>
+				</tr>
+				<tr>
+					<td><br></td>
+				</tr>
+			</table>
+
+			<div class="container"
+				style="background-color: rgba(255, 255, 255, 0.776);border-radius: 5%;  padding: 20px; margin-top: 20px;">
+				<h5 style="margin-bottom: 10px; color: red; font-weight: bold;">*Note:</h5>
+				<h6 style="text-align: center; line-height: 1.6;color: rgb(0, 0, 0);">
+					*If your salary is ₹250,000 or less, you don’t pay any tax, so your salary remains the same. <br>
+					*If your salary is between ₹250,001 and ₹500,000, a 10% tax is applied to your salary. <br>
+					*If your salary is between ₹500,001 and ₹1,000,000, a 20% tax is applied to your salary. <br>
+					*If your salary is ₹1,000,000 or more, a 30% tax is applied to your salary.
+				</h6>
+			</div>
+		</div>
+	</center>
+
+</body>
+
+</html>

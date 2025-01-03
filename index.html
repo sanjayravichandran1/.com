@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio.com</title>
+  <link rel="stylesheet" href="StyleFolio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="ScriptFolio.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <section>
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* Custom Navbar Styling */
+      .navbar-brand h2 {
+        padding-left: 10px;
+        padding-top: 5px;
+        color: rgb(207, 7, 163);
+        font-family: 'Open Sans', 'Helvetica Neue';
+        font-size: x-large;
+
+      }
+
+      .navbar {
+        background-color: rgba(20, 2, 33, 0.555);
+        backdrop-filter: blur(5px);
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .nav-link {
+        color: white !important;
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+      }
+
+      .nav-link:hover {
+        color: rgb(207, 7, 163) !important;
+      }
+
+      .nav-link {
+        font-family: Times, serif;
+        font-size: large;
+      }
+
+      .navbar-nav .nav-item {
+        margin-left: 10px;
+
+      }
+
+      /* Sticky Navbar */
+      .sticky-nav {
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+      }
+
+      @media screen and (max-width:768) {
+        .navbar {
+          background-color: rgba(0, 0, 0, 0);
+          padding: 0px;
+          margin: 0px;
+
+        }
+      }
+
+      #closeButton {
+        display: none;
+        /* Hidden by default */
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 999;
+      }
+
+      @media (max-width: 768px) {
+        #closeButton {
+          display: block !important;
+          opacity: 0px;
+          padding-top: 80px;
+        }
+      }
+    </style>
+    </head>
+
+    <body>
+      <div style="background-color: rgb(20, 2, 33);">
+        <div class="sticky-nav">
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+              <!-- Brand Logo -->
+              <a class="navbar-brand" href="#">
+                <h2><b style="font-size: x-large;">San..!</b></h2>
+              </a>
+              <!-- Toggler for Mobile View -->
+
+              <button onclick="showsidebar()" class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- Navbar Links -->
+              <div class="collapse navbar-collapse sidebar" id="navbarNav">
+                <br>
+
+                <ul onclick="hidesidebar()" class="navbar-nav ms-auto">
+                  <li class="nav-item" id="closeButton">
+                    <a class="nav-link" onclick="hidesidebar()" href=""><span
+                        style="padding: 30px; padding-top: 0%;padding-bottom: 0%; display: flex;" type="button">
+                      </span></a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#About">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Feedback.html">Feedback</a>
+                  </li>
+
+
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <header id="home">
+          <div
+            style="background-color: rgb(20, 2, 33); height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center;">
+            <div class="container">
+              <!-- Profile Image -->
+              <div class="profile">
+                <img style="color: rgba(23, 40, 54, 0.532);" src="proimg.png" class="proimg1" alt="Profile Image">
+              </div>
+
+              <!-- Personal Data -->
+              <div class="prnl-data">
+                <div>
+                  <h2 style="color: aliceblue;">Hi there!</h2>
+                  <h1 style="color: aliceblue;">I am</h1>
+                </div>
+                <h1 style="color: rgb(173, 4, 137);font-family: 'Anton', sans-serif; font-weight: bold;">Sanjay
+                  Ravichandran</h1>
+                <h3 style="color: rgb(255, 255, 255);font-family:  'Anton' Arial, sans-serif ;">Software Developer (Java
+                  Full-Stack)</h3>
+                <br>
+                <button class="hire-me" onclick="window.location.href='mailto:sanjayravichandran07@gmail.com';">
+                  Hire Me
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section id="About">
+          <div style="background-color:rgb(20, 2, 33) ;height: 10px;"></div>
+        </section>
+
+        <section>
+          <div class="cont1">
+            <p>
+            <h3>"Hi there! I'm glad you're here."</h3><br>
+            <p class="container-fluid">
+              I'm a Java Full Stack Developer passionate about
+              creating powerful and intuitive web applications.
+              My work bridges visually engaging frontend designs
+              with efficient and secure backend systems.
+              This portfolio showcases my journey, skills,
+              and projects built with technologies like Java,
+              Spring Boot, JavaScript, HTML, CSS, and MySQL. My vision is to innovate,
+              solve problems, and deliver solutions that make a difference.
+              Feel free to explore, and let’s connect to bring your ideas to life.
+            </p>
+            </p>
+
+            <div><a href="#projects" class="btn btn-outline-secondary ">Know more...</a></div>
+
+          </div>
+        </section>
+
+        <section id="projects" style="background-color: antiquewhite;">
+
+
+          <div class="cont3">
+            <center style="position: static;">
+              <!-- First Image Wrapper -->
+              <div class="img-wrapper">
+                <a href="index01.html">
+                  <img class="proimg" src="Pro1.webp" alt="Image 1">
+                  <div class="text-overlay">
+                    <h1>Seamless E-Commerce Solutions</h1>
+                    <p>Secure, innovative, and user-friendly. Shop a wide range of products today.</p>
+                  </div>
+              </div>
+              </a>
+
+
+              <!-- Second Image Wrapper -->
+              <div class="img-wrapper">
+                <a href="EmpSalary.html">
+                  <img class="proimg" src="empsal.webp" alt="Image 2">
+                  <div class="text-overlay">
+                    <h1>Employee Salary Calculator</h1>
+                    <p>A simple tool to calculate employee salaries quickly and accurately.</p>
+                  </div>
+              </div>
+              </a>
+              <!-- Second Image Wrapper -->
+              <div class="img-wrapper">
+                <a href="Index4.html">
+                  <img class="proimg" src="userIF.webp" alt="Image 2">
+                  <div class="text-overlay">
+                    <h1>Profile Interface Design</h1>
+                    <p>A clean and user-friendly profile interface to display personal details and activity seamlessly.
+                    </p>
+                  </div>
+              </div>
+              </a>
+              <!-- Second Image Wrapper -->
+              <div class="img-wrapper">
+                <a href="Index1.html">
+                  <img class="proimg" src="pro5.webp" alt="Image 2">
+                  <div class="text-overlay">
+                    <h1>Interactive UI with Transitions</h1>
+                    <p>Add smooth transitions and responsive pop-up messages to enhance user experience..</p>
+                  </div>
+              </div>
+              </a>
+              <!-- Second Image Wrapper -->
+              <div class="img-wrapper">
+                <a href="calc.html">
+                  <img class="proimg" src="cal.jpeg" alt="Image 2">
+                  <div class="text-overlay">
+                    <h1>Online Calculator</h1>
+                    <p>A simple and easy-to-use online calculator for basic math
+                      operations like addition, subtraction, multiplication, division, and modulus.</p>
+                  </div>
+              </div>
+              </a>
+              <!-- Second Image Wrapper -->
+              <div class="img-wrapper">
+                <a href="EmpTaxcal.html">
+                  <img class="proimg" src="pro6.jpg" alt="Image 2">
+                  <div class="text-overlay">
+                    <h1>Employee Salary Tax Calculator</h1>
+                    <p>Easily compute tax deductions and net salary for
+                      employees with this intuitive and efficient tool.</p>
+                  </div>
+              </div>
+              </a>
+
+              <!-- Second Image Wrapper -->
+              <div class="img-wrapper">
+                <a href="Agecalc.html">
+                  <img class="proimg" src="agecal.webp" alt="Image 2">
+                  <div class="text-overlay">
+                    <h1>Age Calculator</h1>
+                    <p>A simple and accurate tool to calculate age in years based on the date of birth. </p>
+                  </div>
+              </div>
+              </a>
+              <!-- Second Image Wrapper -->
+              <div class="img-wrapper">
+                <a href="Index3.html">
+                  <img class="proimg" src="Anime.jpeg" alt="Image 2">
+                  <div class="text-overlay">
+                    <h1> Exclusive Animated Icon Downloads</h1>
+                    <p>Explore our library of dynamic and visually captivating animated icon. </p>
+                  </div>
+              </div>
+              </a>
+          </div>
+      </div>
+      </div>
+
+
+      </div>
+  </section>
+  <center>
+    <section id="contact" style="position: sticky ; background-color: rgb(172, 146, 146);">
+      <div style="padding-top:10% ;padding-bottom:10%; padding-bottom: 10%;">
+        <h3 class="mb" style="font-weight: bold">My Info</h3>
+        <div>
+          <p class="card-text">
+          <h5> <strong>Eamil:</strong> sanjayravichandran07@gmail.com <br>
+            <strong>Phone:</strong> +91 8754210186 <br>
+            <strong>Address:</strong>Thuvakudi, Trichy , Tamil Nadu
+          </h5>
+
+          </p>
+          <!-- Include Font Awesome CDN in your project -->
+
+
+          <a href="https://www.linkedin.com/in/sanjay-ravichandran-4aa7462a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/sanjayravichandran1" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.instagram.com/s_a_n__official/profilecard/?igsh=MTd3ZXIzMHBtcjhibA==" target="_blank"
+            class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+
+      </div>
+      </div>
+      <div style="position: sticky;bottom: 0%;">
+        <footer class="bg-dark text-white text-center py-3">
+          <p>&copy; sanjayravichandran.</p>
+        </footer>
+        <section>
+      </div>
+    </section>
+
+  </center>
+  </section>
+  </section>
+  </div>
+
+</body>
+
+</html>

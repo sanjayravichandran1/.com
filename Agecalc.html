@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>AgeCalculation</title>
+    <script>
+        function btncancel() {
+            location.href = "Agecalc.html";
+        }
+        function Dob() {
+            var currentDate = new Date(); // Get current date
+            var currentYear = currentDate.getFullYear(); // Get current year
+            var currentMonth = currentDate.getMonth() + 1; // Get current month (0-indexed, so adding 1)
+            var currentDay = currentDate.getDate();
+            var birthYear = parseInt(document.getElementById("C").value);
+            var birthDay = parseInt(document.getElementById("D").value);
+
+            if (!birthDay || !birthYear) {
+                alert("Please enter a valid date of birth.");
+                return;
+            }
+            var age = currentYear - birthYear;
+
+
+            if (currentMonth < birthDay || (currentMonth === birthDay && currentDay < birthDay)) {
+                age--;
+            }
+            document.getElementById("R").value = age;
+        }
+
+    </script>
+</head>
+
+<body style="background-color: aquamarine;">
+
+    <center>
+        <div style=" padding-top:10% ; ">
+            <h1>AGE CALCUATION</h1>
+            <br>
+
+            <table border="0">
+                <tr>
+                    <th>Enter Date of Birth (Day):</th>
+                    <td><input style="margin: 10px;" type="text" id="D" placeholder="Enter day (1-31)"></td>
+                </tr>
+                <tr>
+                    <th>Enter Date of Birth (Year):</th>
+                    <td><input style="margin: 10px;" type="text" id="C" placeholder="Enter year (YYYY)"></td>
+                </tr>
+                <tr>
+                    <th>Your Age:</th>
+                    <td><input style="margin: 10px;" type="text" id="R" readonly></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input style="margin: 10px; margin-left: 80px;" class="btn btn-danger" type="button"
+                            value="Cancel" onclick="btncancel()" id="c">
+                    </td>
+                    <td>
+                        <input style="margin: 10px;" type="button" class="btn btn-success" value="Submit"
+                            onclick="Dob()" id="d">
+                    </td>
+            </table>
+            <br>
+            <br>
+            <br>
+        </div>
+        <button type="button" class="btn btn-primary "
+            style="margin-right: 30px; padding-left: 20px; padding-right:20px ;"
+            onclick="location.href='index.html#projects';">Back</button>
+        </div>
+        </div>
+    </center>
+</body>
+
+</html>
